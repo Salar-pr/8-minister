@@ -1,0 +1,17 @@
+import random as rnd
+
+n = int(input("enter your n:"))
+p_s = n*n
+
+
+
+def board(populaiton_size, n):
+    populaiton_list = []
+    for i in range(populaiton_size):
+        new_member = []
+        for j in range(n):
+            new_member.append(rnd.randint(1, n))
+        new_member.append(0)
+        populaiton_list.append(new_member)
+    return populaiton_list
+population = board(p_s, n)
